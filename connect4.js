@@ -118,7 +118,7 @@ handleClick(evt) {
   }
     
   // switch players
-  currPlayer = currPlayer === 1 ? 2 : 1;
+  this.currPlayer = this.currPlayer === this.players[0] ? this.players[1] : this.players[0];
 }
 
 /** checkForWin: check board cell-by-cell for "does a win start here?" */
