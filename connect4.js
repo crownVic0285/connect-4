@@ -61,9 +61,9 @@ makeHtmlBoard() {
 
 /** findSpotForCol: given column x, return top empty y (null if filled) */
 
-function findSpotForCol(x) {
-  for (let y = HEIGHT - 1; y >= 0; y--) {
-    if (!board[y][x]) {
+findSpotForCol(x) {
+  for (let y = this.height - 1; y >= 0; y--) {
+    if (!this.board[y][x]) {
       return y;
     }
   }
