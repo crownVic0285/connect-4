@@ -123,24 +123,24 @@ handleClick(evt) {
 
 /** checkForWin: check board cell-by-cell for "does a win start here?" */
 
-function checkForWin() {
-  function _win(cells) {
+checkForWin() {
     // Check four cells to see if they're all color of current player
     //  - cells: list of four (y, x) cells
     //  - returns true if all are legal coordinates & all match currPlayer
-
-    return cells.every(
+   const _win = cells =>
+    cells.every(
       ([y, x]) =>
         y >= 0 &&
-        y < HEIGHT &&
+        y < this.height &&
         x >= 0 &&
-        x < WIDTH &&
-        board[y][x] === currPlayer
+        x < this.width &&
+        this.board[y][x] === this.currPlayer
     );
-  }
+  
 
-  for (let y = 0; y < HEIGHT; y++) {
-    for (let x = 0; x < WIDTH; x++) {
+
+  for (let y = 0; y < this.height; y++) {
+    for (let x = 0; x < this.width; x++) {
       // get "check list" of 4 cells (starting here) for each of the different
       // ways to win
       const horiz = [[y, x], [y, x + 1], [y, x + 2], [y, x + 3]];
