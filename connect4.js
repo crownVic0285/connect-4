@@ -113,8 +113,8 @@ handleClick(evt) {
   }
   
   // check for tie
-  if (board.every(row => row.every(cell => cell))) {
-    return endGame('Tie!');
+  if (this.board.every(row => row.every(cell => cell))) {
+    return this.endGame('Tie!');
   }
     
   // switch players
