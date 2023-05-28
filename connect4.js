@@ -84,8 +84,10 @@ placeInTable(y, x) {
 
 /** endGame: announce game end */
 
-function endGame(msg) {
+endGame(msg) {
   alert(msg);
+  const top = document.querySelector("#column-top");
+  top.removeEventListener("click", this.handleGameClick);
 }
 
 /** handleClick: handle click of column top to play piece */
