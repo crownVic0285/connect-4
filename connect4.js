@@ -107,8 +107,9 @@ handleClick(evt) {
   this.placeInTable(y, x);
   
   // check for win
-  if (checkForWin()) {
-    return endGame(`Player ${currPlayer} won!`);
+  if (this.checkForWin()) {
+    this.gameOver = true;
+    return this.endGame(`Player ${this.currPlayer.color} won!`);
   }
   
   // check for tie
