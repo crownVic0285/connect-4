@@ -103,8 +103,8 @@ handleClick(evt) {
   }
 
   // place piece in board and add to HTML table
-  board[y][x] = currPlayer;
-  placeInTable(y, x);
+  this.board[y][x] = this.currPlayer;
+  this.placeInTable(y, x);
   
   // check for win
   if (checkForWin()) {
