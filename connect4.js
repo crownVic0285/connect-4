@@ -156,5 +156,15 @@ checkForWin() {
   }
 }
 
-makeBoard();
-makeHtmlBoard();
+class Player{
+  constructor(color){
+    this.color = color;
+  }
+}
+
+document.getElementById('start-game').addEventListener('click', () => {
+  let p1 = new Player(document.getElementById('p1-color').value);
+  let p2 = new Player(document.getElementById('p2-color').value);
+  new Game(p1, p2);
+});
+
